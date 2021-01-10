@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+h1 {text-align: center;}
+form {text-align: center;}
+body{text-align: center;}
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pingus</title>
+		<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+		<h1>Pingus</h1>
+		<p>Already pinging that URL, Bruh!</p>
+		<form action="{{ url_for('send') }}" method="post">
+			<input type="text" name="add" placeholder="url to ping">
+			<input type="submit" value="PING ME">
+		</form>
+  </body>
+</html>
