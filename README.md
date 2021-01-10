@@ -6,6 +6,8 @@
 ## What's this?
 A simple uptime robot alternative.
 
+## THIS BOT WILL ONLY WORK ON [REPL.IT](https://repl.it) BECAUSE IT'S BASED ON REPL.IT DB (DATABASE)
+
 [![Run on Repl.it](https://repl.it/badge/github/navaneethkm004/simple-uptime)](https://repl.it/github/navaneethkm004/simple-uptime)
 
 ## Author
