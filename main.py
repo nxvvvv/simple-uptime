@@ -27,15 +27,14 @@ def contact():
 def send():
 	newPing = flask.request.form['add']
 	pings = str(asyncio.run(db.view('pings'))).split('\n')
-	if newPing not in pings:
-		try:
-			requests.get(newPing)
-			asyncio.run(db.set(pings=str(asyncio.run(db.view('pings'))) + '\n' + newPing))
-			return flask.render_template('success.html')
-		except:
-			return flask.render_template('incorrect.html')
-	else:
+	if newPing in pings:
 		return flask.render_template('duplicate.html')
+	try:
+		requests.get(newPing)
+		asyncio.run(db.set(pings=str(asyncio.run(db.view('pings'))) + '\n' + newPing))
+		return flask.render_template('success.html')
+	except:
+		return flask.render_template('incorrect.html')
 
 
 app.run(host='0.0.0.0', port=8080)
