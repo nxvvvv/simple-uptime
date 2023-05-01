@@ -7,7 +7,7 @@ authors = ["Navaneeth K M <navaneethkm004@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 replitdb = "^0.0.10"
-flask = "^1.1.2"
+flask = "^2.3.2"
 
 [tool.poetry.dev-dependencies]
 
